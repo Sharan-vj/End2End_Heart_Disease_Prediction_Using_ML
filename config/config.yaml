@@ -11,3 +11,8 @@ data_validation:
   root_dir: artifacts/data_validation
   dataset_csv: artifacts/data_ingestion/heart.csv
   status_file: artifacts/data_validation/status.txt
+
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  dataset_csv: artifacts/data_ingestion/heart.csv
