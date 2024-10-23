@@ -76,3 +76,22 @@ class ConfigManager:
             target_column=schema.name
         )
         return model_trainer_config
+
+
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        params = self.params.RandomForestClassifier
+        schema = self.schema.TARGET_COLUMN
+        create_directory(directory_path=[config.root_dir], log=True)
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            test_csv_file=config.test_csv_file,
+            run_file=config.run_file,
+            trained_model=config.trained_model,
+            final_model=config.final_model,
+            metrics_file=config.metrics_file,
+            all_params=params,
+            target_column=schema.name
+        )
+        return model_evaluation_config

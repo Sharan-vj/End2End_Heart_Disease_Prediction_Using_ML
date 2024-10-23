@@ -43,3 +43,16 @@ class ModelTrainerConfig:
     bootstrap: bool
     class_weight: str
     target_column: str
+
+
+# Model Evaluation Config
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    test_csv_file: Path
+    run_file: Path
+    trained_model: Path
+    final_model: Path
+    metrics_file: Path
+    all_params: dict
+    target_column: str
