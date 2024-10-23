@@ -39,7 +39,7 @@ def yaml_reader(filepath: Path, log: bool) -> ConfigBox:
         raise e
 
 
-def create_directories(directory_path: list, log: bool) -> None:
+def create_directory(directory_path: list, log: bool) -> None:
     """
     Creates directories specified in the 'directory_path' list.
 
@@ -56,7 +56,7 @@ def create_directories(directory_path: list, log: bool) -> None:
     for path in directory_path:
         os.makedirs(path, exist_ok=True)
         if log:
-            logger.info(msg=f"{directory_path} Directories created successfully")
+            logger.info(msg=f"{directory_path} Directory created successfully")
 
 
 def save_json(path: Path, data: dict, log: bool) -> None:
