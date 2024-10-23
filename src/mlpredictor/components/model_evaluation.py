@@ -52,7 +52,6 @@ class ModelEvaluation:
                 "f1_score": f1
             }
             
-            save_json(path=Path(self.config.metrics_file), data=scores, log=True)
             mlflow.log_metric(key="accuracy score", value=ac)
             mlflow.log_metric(key="f1_score", value=f1)
 
