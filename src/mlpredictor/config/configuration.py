@@ -52,3 +52,27 @@ class ConfigManager:
             dataset_csv=config.dataset_csv
         )
         return data_transformation_config
+
+
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_trainer
+        params = self.params.RandomForestClassifier
+        schema = self.schema.TARGET_COLUMN
+        create_directory(directory_path=[config.root_dir], log=True)
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir=config.root_dir,
+            train_csv_file=config.train_csv_file,
+            run_file=config.run_file,
+            model_name=config.model_name,
+            n_estimators=params.n_estimators,
+            criterion=params.criterion,
+            max_depth=params.max_depth,
+            min_samples_split=params.min_samples_split,
+            min_samples_leaf=params.min_samples_leaf,
+            max_features=params.max_features,
+            bootstrap=params.bootstrap,
+            class_weight=params.class_weight,
+            target_column=schema.name
+        )
+        return model_trainer_config

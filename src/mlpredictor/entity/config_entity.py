@@ -25,3 +25,21 @@ class DataValidationConfig:
 class DataTransformationConfig:
     root_dir: Path
     dataset_csv: Path
+
+
+# Model Trainer Config
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    root_dir: Path
+    train_csv_file: Path
+    run_file: Path
+    model_name: str
+    n_estimators: int
+    criterion: str
+    max_depth: int
+    min_samples_split: int
+    min_samples_leaf: int
+    max_features: str
+    bootstrap: bool
+    class_weight: str
+    target_column: str

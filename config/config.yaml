@@ -16,3 +16,11 @@ data_validation:
 data_transformation:
   root_dir: artifacts/data_transformation
   dataset_csv: artifacts/data_ingestion/heart.csv
+
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  train_csv_file: artifacts/data_transformation/train.csv
+  run_file: artifacts/model_trainer/stored_runs.txt
+  model_name: model.joblib
+  
