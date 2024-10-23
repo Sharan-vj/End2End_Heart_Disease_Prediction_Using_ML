@@ -9,3 +9,12 @@ class DataIngestionConfig:
     root_dir: Path
     dataset_url: str
     dataset_raw: Path
+
+
+# Data Validation Config
+@dataclass(frozen=True)
+class DataValidationConfig:
+    root_dir: Path
+    dataset_csv: Path
+    status_file: str
+    all_schema: dict

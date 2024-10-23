@@ -28,3 +28,16 @@ class ConfigManager:
         )
         return data_ingestion_config
     
+
+    def get_data_validation_config(self) -> DataValidationConfig:
+        config = self.config.data_validation
+        schema = self.schema.COLUMNS
+        create_directory(directory_path=[config.root_dir], log=True)
+
+        data_validation_config = DataValidationConfig(
+            root_dir=config.root_dir,
+            dataset_csv=config.dataset_csv,
+            status_file=config.status_file,
+            all_schema=schema
+        )
+        return data_validation_config
