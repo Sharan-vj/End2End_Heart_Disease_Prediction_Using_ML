@@ -15,13 +15,16 @@
 * Jupyter Notebook: For exploratory data analysis (EDA)
 * HTML/CSS: To design the user interface for the web application
 * Git/GitHub: For version control and project hosting
+* Docker: For Containerizing the application
+* GitHub Action: For managing all CICD workflows
+* AWS: For deploying the ML application
 
 ### Installation and Setup
 
 1. **Clone the Repository**:
     ```bash
     git clone https://github.com/Sharan-vj/End2End_Heart_Disease_Prediction_Using_ML.git
-    cd End2End_Nutrition_Based_Food_Health_Classifier_Using_ML
+    cd End2End_Heart_Disease_Prediction_Using_ML
     ```
 
 2. **Create a Virtual Environment**:
@@ -78,7 +81,7 @@
 * Contributions are welcome! If you have any suggestions or improvements, please raise an issue or submit a pull request.
 
 ### License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+* This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ### Acknowledgments
 * Special thanks to the open-source community for the libraries used in this project.
